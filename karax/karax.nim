@@ -163,7 +163,7 @@ proc toDom*(n: VNode; useAttachedNode: bool; kxi: KaraxInstance = nil): Node =
     result = document.createElement("div")
     result.innerHTML = n.text
     attach n
-    return result
+    return result.firstChild
   elif n.kind == VNodeKind.vthunk:
     let x = callThunk(vcomponents[n.text], n)
     result = toDom(x, useAttachedNode, kxi)
