@@ -222,6 +222,10 @@ buildLookupTables()
 when defined(js):
   type
     VStyle* = JSeq[cstring]
+
+  when not defined(release):
+    proc used*(style: VStyle): bool = {.emit: "`result` = `style`.__used || false;".}
+    proc `used=`*(style: VStyle, used: bool) = {.emit: "`style`.__used = `used`;".}
 else:
   type
     VStyle* = ref seq[string]
@@ -319,6 +323,7 @@ when defined(js):
 
   proc applyStyle*(n: Node; s: VStyle) {.noSideEffect.} =
     ## apply the style to the real DOM node ``n``.
+    when not defined(release): s.used = true
 
     #n.style = Style() # optimized, this is a hotspot:
     {.emit: "`n`.style = {};".}

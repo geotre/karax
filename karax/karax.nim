@@ -302,6 +302,10 @@ proc eq(a, b: VNode; recursive: bool): EqResult =
   if a.class != b.class or not eq(a.style, b.style) or not sameAttrs(a, b):
     when defined(profileKarax): inc reasons[deSimilar]
     return similar
+  else:
+    when not defined(release) and not defined(karaxSilenceVstyleWarning):
+      if not a.style.isNil and a.style.used:
+        echo "Warning: Vstyle used on multiple renders. This may cause the style changes not to be recognised. See https://github.com/karaxnim/karax/issues/210 for details. Compile with -d:release or -d:karaxSilenceVstyleWarning to remove this warning."
 
   if recursive:
     if a.len != b.len:
