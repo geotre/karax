@@ -499,3 +499,7 @@ proc getVNodeById*(n: VNode; id: cstring): VNode =
   for i in 0..<n.len:
     result = getVNodeById(n[i], id)
     if result != nil: return result
+
+when not defined(js):
+  proc renderToFile*(file: string; renderer: proc (): VNode) =
+    writeFile file, $renderer()
