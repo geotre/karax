@@ -16,11 +16,12 @@ bin = @["karax/tools/karun"]
 installExt = @["nim"]
 
 task nimibook, "Compiles the nimibook docs":
-  rmDir "docs/dist"
+  setCurrentDir "docs"
+  rmDir "dist"
   exec "nimble install -y nimib@#head nimibook@#head"
-  exec "nim c docs/nbook.nim"
-  exec "./docs/nbook update"
-  exec "./docs/nbook build"
+  exec "nim c nbook.nim"
+  exec "./nbook update"
+  exec "./nbook build"
 
 task apidocs, "docs only for api":
   rmDir "docs/dist/apidocs"
