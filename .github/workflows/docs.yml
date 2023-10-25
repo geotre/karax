@@ -3,7 +3,9 @@ name: github pages
 on:
   push:
     branches:
-      - main,add-nimibook-docs
+      - main
+      - master
+      - add-nimibook-docs
 
 jobs:
   docs:
