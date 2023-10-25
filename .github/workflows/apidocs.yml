@@ -1,0 +1,25 @@
+name: apidocs
+on:
+  push:
+    tags:
+      - '*.*.*'
+env:
+  nim-version: 'stable'
+  deploy-dir: .gh-pages/apidocs
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: jiro4989/setup-nim-action@v1
+        with:
+          nim-version: ${{ env.nim-version }}
+      - run: nimble install -Y
+      - run: for f in karax/*.nim; do nimble doc --backend:js --out:${{ env.deploy-dir }} $f; done
+      - name: "Rename to index.html"
+        run: mv ${{ env.deploy-dir }}/${{ github.event.repository.name }}.html ${{ env.deploy-dir }}/index.html
+      - name: Deploy documents
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ${{ env.deploy-dir }}
