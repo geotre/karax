@@ -56,7 +56,7 @@ proc autocomplete*(s: AutocompleteState; onselection: proc(s: cstring)): VNode =
     # TAB: Select the currently focused item, close the menu, and
     #      move focus to the next focusable element
     s.controlPressed = false
-    case ev.keyCode
+    case cast[KeyboardEvent](ev).keyCode
     of UP:
       s.controlPressed = true
       s.showCandidates = true

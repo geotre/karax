@@ -1,0 +1,9 @@
+[nimib]
+srcDir = "./book"
+homeDir = "./dist"
+
+[nimibook]
+language = "en-us"
+title = "Karax documentation"
+description = "Karax is as a versatile web application framework written in Nim"
+git_repository_url = "https://github.com/karaxnim/karax.git"

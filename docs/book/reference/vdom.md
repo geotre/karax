@@ -1,6 +1,20 @@
 
-Virtual DOM
-===========
+<div style="color: #f53;border: 1px solid #f53;padding: .5em .7em;border-radius: .25em;">TODO: rewrite this page</div>
+
+## DOM diffing
+
+Ok, so now we have seen DOM creation and event handlers. But how does
+Karax actually keep the DOM up to date? The trick is that every event
+handler is wrapped in a helper proc that triggers a *redraw* operation
+that calls the *renderer* that you initially passed to ``setRenderer``.
+So a new virtual DOM is created and compared against the previous
+virtual DOM. This comparison produces a patch set that is then applied
+to the real DOM the browser uses internally. This process is called
+"virtual DOM diffing" and other frameworks, most notably Facebook's
+*React*, do quite similar things. The virtual DOM is faster to create
+and manipulate than the real DOM so this approach is quite efficient.
+
+# Virtual DOM
 
 The virtual dom is in the ``vdom`` module.
 
@@ -25,6 +39,9 @@ These extensions are:
      function attached to it that produces the ``Node`` DOM structure
      on demand.
 
+Since ``div`` is a keyword in Nim, karax choose to use ``tdiv`` instead.
+``tdiv`` produces a ``<div>`` virtual DOM node.
+
 For convenience of the resulting Nim DSL these tags have enum names
 that differ from their HTML equivalent:
 
@@ -46,13 +63,3 @@ use it.
 
 **Note**: This is not a hint for the DOM diff algorithm, multipe nodes can
 all have the same key value.
-
-
-Event system
-============
-
-Karax does not abstract over the event system the DOM offers much: The same
-``Event`` structure is used. Every callback has the
-signature ``proc (ev: Event; n: VNode)`` or empty ``proc ()``.
-
-
