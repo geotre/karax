@@ -60,15 +60,11 @@ jobs:
         run: |
           find .
 
-      - name: Setup docs
-        run: |
-          mv docs/dist docs/
-
       - name: Deploy
         if: success()
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: gh-pages
-          build_dir: ./docs
+          build_dir: ./docs/dist
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
