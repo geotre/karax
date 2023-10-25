@@ -1,7 +1,7 @@
 
 ## Overview
 
-**Karax** is as a versatile web application framework written in Nim.
+**Karax** is a versatile web application framework written in Nim.
 
 - **Dual Compilation**: Seamlessly compiles to both JS and native backends, empowering developers to deploy on either frontend or backend platforms.
   - Client-side experiences with `Single Page Apps` (SPAs).
