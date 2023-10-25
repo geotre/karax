@@ -1,4 +1,4 @@
 
 ## Localstorage
 
-[Generated API docs](/apidocs/karax/localstorage.html)
+[Generated API docs](../../apidocs/karax/localstorage.html)

@@ -1,4 +1,4 @@
 
 ## VStyles
 
-[Generated API docs](/apidocs/karax/vstyles.html)
+[Generated API docs](../../apidocs/karax/vstyles.html)

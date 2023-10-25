@@ -1,4 +1,4 @@
 
 ## Jstrutils
 
-[Generated API docs](/apidocs/karax/jstrutils.html)
+[Generated API docs](../../apidocs/karax/jstrutils.html)

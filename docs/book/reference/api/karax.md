@@ -1,4 +1,4 @@
 
 ## Karax module
 
-[Generated API docs](/apidocs/karax/karax.html)
+[Generated API docs](../../apidocs/karax/karax.html)

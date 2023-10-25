@@ -1,4 +1,4 @@
 
 ## Compact
 
-[Generated API docs](/apidocs/karax/compact.html)
+[Generated API docs](../../apidocs/karax/compact.html)

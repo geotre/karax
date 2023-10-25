@@ -1,4 +1,4 @@
 
 ## Karax DSL
 
-[Generated API docs](/apidocs/karax/karaxdsl.html)
+[Generated API docs](../../apidocs/karax/karaxdsl.html)

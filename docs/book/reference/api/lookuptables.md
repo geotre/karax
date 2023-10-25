@@ -1,4 +1,4 @@
 
 ## Lookuptables
 
-[Generated API docs](/apidocs/karax/lookuptables.html)
+[Generated API docs](../../apidocs/karax/lookuptables.html)

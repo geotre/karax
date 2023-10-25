@@ -1,4 +1,4 @@
 
 ## Reactive
 
-[Generated API docs](/apidocs/karax/reactive.html)
+[Generated API docs](../../apidocs/karax/reactive.html)

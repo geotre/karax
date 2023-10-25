@@ -1,4 +1,4 @@
 
 ## Errors
 
-[Generated API docs](/apidocs/karax/errors.html)
+[Generated API docs](../../apidocs/karax/errors.html)

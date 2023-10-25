@@ -1,4 +1,4 @@
 
 ## JJson
 
-[Generated API docs](/apidocs/karax/jjson.html)
+[Generated API docs](../../apidocs/karax/jjson.html)

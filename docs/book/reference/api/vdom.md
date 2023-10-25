@@ -1,4 +1,4 @@
 
 ## VDom
 
-[Generated API docs](/apidocs/karax/vdom.html)
+[Generated API docs](../../apidocs/karax/vdom.html)

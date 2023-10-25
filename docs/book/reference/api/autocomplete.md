@@ -1,4 +1,4 @@
 
 ## Autocomplete
 
-[Generated API docs](/apidocs/karax/autocomplete.html)
+[Generated API docs](../../apidocs/karax/autocomplete.html)
