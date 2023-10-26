@@ -1,0 +1,17 @@
+nimTitle	jdict	jdict.html	module karax/jdict		0
+nim	JDict	jdict.html#JDict	type JDict		3
+nim	`[]`	jdict.html#[],JDict[K,V],K	proc `[]`[K, V](d: JDict[K, V]; k: K): V		5
+nim	`[]=`	jdict.html#[]=,JDict[K,V],K,V	proc `[]=`[K, V](d: JDict[K, V]; k: K; v: V)		6
+nim	newJDict	jdict.html#newJDict	proc newJDict[K, V](): JDict[K, V]		8
+nim	contains	jdict.html#contains,JDict[K,V],K	proc contains[K, V](d: JDict[K, V]; k: K): bool		10
+nim	del	jdict.html#del,JDict[K,V],K	proc del[K, V](d: JDict[K, V]; k: K)		12
+nim	keys	jdict.html#keys.i,JDict[K,V]	iterator keys[K, V](d: JDict[K, V]): K		14
+nim	JSeq	jdict.html#JSeq	type JSeq		21
+nim	`[]`	jdict.html#[],JSeq[T],int	proc `[]`[T](s: JSeq[T]; i: int): T		23
+nim	`[]=`	jdict.html#[]=,JSeq[T],int,T	proc `[]=`[T](s: JSeq[T]; i: int; v: T)		24
+nim	newJSeq	jdict.html#newJSeq,int	proc newJSeq[T](len: int = 0): JSeq[T]		26
+nim	len	jdict.html#len,JSeq[T]	proc len[T](s: JSeq[T]): int		27
+nim	add	jdict.html#add,JSeq[T],T	proc add[T](s: JSeq[T]; x: T)		28
+nim	shrink	jdict.html#shrink,JSeq[T],int	proc shrink[T](s: JSeq[T]; shorterLen: int)		30
+nimgrp	[]=	jdict.html#[]=-procs-all	proc		6
+nimgrp	[]	jdict.html#[]-procs-all	proc		5

@@ -1,0 +1,20 @@
+nimTitle	vstyles	vstyles.html	module karax/vstyles		0
+nim	StyleAttr	vstyles.html#StyleAttr	enum StyleAttr		12
+nim	VStyle	vstyles.html#VStyle	type VStyle		224
+nim	version	vstyles.html#version,VStyle	proc version(s: VStyle): int		226
+nim	version=	vstyles.html#version=,VStyle,int	proc version=(s: VStyle; v: int)		227
+nim	eq	vstyles.html#eq,VStyle,VStyle	proc eq(a, b: VStyle): bool		234
+nim	versionMatch	vstyles.html#versionMatch,VStyle,int	proc versionMatch(s: VStyle; version: int): bool		244
+nim	setAttr	vstyles.html#setAttr,VStyle,kstring,kstring	proc setAttr(s: VStyle; a, value: kstring)		250
+nim	setAttr	vstyles.html#setAttr,VStyle,StyleAttr,kstring	proc setAttr(s: VStyle; attr: StyleAttr; value: kstring)		275
+nim	getAttr	vstyles.html#getAttr,VStyle,StyleAttr	proc getAttr(s: VStyle; attr: StyleAttr): kstring		280
+nim	style	vstyles.html#style,varargs[]	proc style(pairs: varargs[(StyleAttr, kstring)]): VStyle		291
+nim	style	vstyles.html#style,StyleAttr,kstring	proc style(a: StyleAttr; val: kstring): VStyle		301
+nim	toCss	vstyles.html#toCss,string	proc toCss(a: string): VStyle		310
+nim	applyStyle	vstyles.html#applyStyle,Node,VStyle	proc applyStyle(n: Node; s: VStyle)		334
+nim	merge	vstyles.html#merge,VStyle,VStyle	proc merge(a, b: VStyle): VStyle		342
+nim	pairs	vstyles.html#pairs.i,VStyle	iterator pairs(s: VStyle): (kstring, kstring)		354
+nim	rgb	vstyles.html#rgb,range[],range[],range[]	proc rgb(r, g, b: range[0 .. 255]): kstring		364
+nim	rgba	vstyles.html#rgba,range[],range[],range[],float	proc rgba(r, g, b: range[0 .. 255]; alpha: float): kstring		367
+nimgrp	style	vstyles.html#style-procs-all	proc		291
+nimgrp	setattr	vstyles.html#setAttr-procs-all	proc		250

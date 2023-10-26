@@ -1,0 +1,6 @@
+nimTitle	compact	compact.html	module karax/compact		0
+nim	vcomponents	compact.html#vcomponents	var vcomponents		10
+nim	ComponentKind	compact.html#ComponentKind	enum ComponentKind		16
+nim	isComponent	compact.html#isComponent,string	proc isComponent(x: string): ComponentKind		24
+nim	newname	compact.html#newname,NimNode	proc newname(n: NimNode): NimNode		59
+nim	compact	compact.html#compact.m,untyped	macro compact(prc: untyped): untyped		69

@@ -1,0 +1,33 @@
+nimTitle	karax	karax.html	module karax/karax		0
+nim	kout	karax.html#kout,T	proc kout[T](x: T)		13
+nim	RouterData	karax.html#RouterData	type RouterData		31
+nim	KaraxInstance	karax.html#KaraxInstance	type KaraxInstance		35
+nim	kxi	karax.html#kxi	var kxi		60
+nim	setFocus	karax.html#setFocus,VNode,KaraxInstance	proc setFocus(n: VNode; enabled = true; kxi: KaraxInstance = kxi)		67
+nim	getVNodeById	karax.html#getVNodeById,cstring,KaraxInstance	proc getVNodeById(id: cstring; kxi: KaraxInstance = kxi): VNode		158
+nim	toDom	karax.html#toDom,VNode,bool,KaraxInstance	proc toDom(n: VNode; useAttachedNode: bool; kxi: KaraxInstance = nil): Node		164
+nim	runDel	karax.html#runDel,KaraxInstance,VNode,int	proc runDel(kxi: KaraxInstance; parent: VNode; position: int)		625
+nim	runIns	karax.html#runIns,KaraxInstance,VNode,VNode,int	proc runIns(kxi: KaraxInstance; parent, kid: VNode; position: int)		633
+nim	runDiff	karax.html#runDiff,KaraxInstance,VNode,VNode	proc runDiff(kxi: KaraxInstance; oldNode, newNode: VNode)		645
+nim	avoidDomDiffing	karax.html#avoidDomDiffing,KaraxInstance	proc avoidDomDiffing(kxi: KaraxInstance = kxi)		663
+nim	redraw	karax.html#redraw,KaraxInstance	proc redraw(kxi: KaraxInstance = kxi)		732
+nim	redrawSync	karax.html#redrawSync,KaraxInstance	proc redrawSync(kxi: KaraxInstance = kxi)		744
+nim	setRenderer	karax.html#setRenderer,proc(RouterData),cstring,proc(RouterData)	proc setRenderer(renderer: proc (data: RouterData): VNode; root: cstring = "ROOT";\n            clientPostRenderCallback: proc (data: RouterData) = nil): KaraxInstance		749
+nim	setRenderer	karax.html#setRenderer,proc),cstring,proc)	proc setRenderer(renderer: proc (): VNode; root: cstring = "ROOT";\n            clientPostRenderCallback: proc () = nil): KaraxInstance		772
+nim	setInitializer	karax.html#setInitializer,proc(RouterData),cstring,proc(RouterData)	proc setInitializer(renderer: proc (data: RouterData): VNode; root: cstring = "ROOT";\n               clientPostRenderCallback: proc (data: RouterData) = nil): KaraxInstance		793
+nim	addEventHandler	karax.html#addEventHandler,VNode,EventKind,EventHandler,KaraxInstance	proc addEventHandler(n: VNode; k: EventKind; action: EventHandler;\n                kxi: KaraxInstance = kxi)		808
+nim	addEventHandler	karax.html#addEventHandler,VNode,EventKind,proc),KaraxInstance	proc addEventHandler(n: VNode; k: EventKind; action: proc ();\n                kxi: KaraxInstance = kxi)		820
+nim	setOnHashChange	karax.html#setOnHashChange,proc(cstring)	proc setOnHashChange(action: proc (hashPart: cstring))		832
+nim	setForeignNodeId	karax.html#setForeignNodeId,cstring,KaraxInstance	proc setForeignNodeId(id: cstring; kxi: KaraxInstance = kxi)		840
+nim	setupErrorHandler	karax.html#setupErrorHandler	proc setupErrorHandler()		847
+nim	loadScript	karax.html#loadScript,cstring,KaraxInstance	proc loadScript(jsfilename: cstring; kxi: KaraxInstance = kxi)		863
+nim	runLater	karax.html#runLater,proc),int	proc runLater(action: proc (); later = 400): TimeOut		870
+nim	setInputText	karax.html#setInputText,VNode,cstring	proc setInputText(n: VNode; s: cstring)		876
+nim	getInputText	karax.html#getInputText,VNode	proc getInputText(n: VNode): cstring		881
+nim	toChecked	karax.html#toChecked,bool	proc toChecked(checked: bool): cstring		885
+nim	toDisabled	karax.html#toDisabled,bool	proc toDisabled(disabled: bool): cstring		888
+nim	toSelected	karax.html#toSelected,bool	proc toSelected(selected: bool): cstring		891
+nim	toAttr	karax.html#toAttr,bool	proc toAttr(value: bool): cstring		894
+nim	vnodeToDom	karax.html#vnodeToDom,VNode,KaraxInstance	proc vnodeToDom(n: VNode; kxi: KaraxInstance = nil): Node		897
+nimgrp	addeventhandler	karax.html#addEventHandler-procs-all	proc		808
+nimgrp	setrenderer	karax.html#setRenderer-procs-all	proc		749

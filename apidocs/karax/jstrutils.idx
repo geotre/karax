@@ -1,0 +1,22 @@
+nimTitle	jstrutils	jstrutils.html	module karax/jstrutils		0
+nim	split	jstrutils.html#split,cstring,cstring	proc split(s, sep: cstring): seq[cstring]		3
+nim	split	jstrutils.html#split,cstring,cstring,int	proc split(s, sep: cstring; max: int): seq[cstring]		5
+nim	strip	jstrutils.html#strip,cstring	proc strip(s: cstring): cstring		7
+nim	startsWith	jstrutils.html#startsWith,cstring,cstring	proc startsWith(a, b: cstring): bool		9
+nim	contains	jstrutils.html#contains,cstring,cstring	proc contains(a, b: cstring): bool		10
+nim	containsIgnoreCase	jstrutils.html#containsIgnoreCase,cstring,cstring	proc containsIgnoreCase(a, b: cstring): bool		12
+nim	substr	jstrutils.html#substr,cstring,int	proc substr(s: cstring; start: int): cstring		15
+nim	substr	jstrutils.html#substr,cstring,int,int	proc substr(s: cstring; start, length: int): cstring		16
+nim	`&`	jstrutils.html#&,cstring,cstring	proc `&`(a, b: cstring): cstring		19
+nim	toCstr	jstrutils.html#toCstr,int	proc toCstr(s: int): cstring		20
+nim	`&`	jstrutils.html#&,int	proc `&`(s: int): cstring		21
+nim	`&`	jstrutils.html#&,bool	proc `&`(s: bool): cstring		22
+nim	`&`	jstrutils.html#&,float	proc `&`(s: float): cstring		23
+nim	`&`	jstrutils.html#&,cstring	proc `&`(s: cstring): cstring		25
+nim	isInt	jstrutils.html#isInt,cstring	proc isInt(s: cstring): bool		27
+nim	parseInt	jstrutils.html#parseInt,cstring	proc parseInt(s: cstring): int		32
+nim	parseFloat	jstrutils.html#parseFloat,cstring	proc parseFloat(s: cstring): BiggestFloat		33
+nim	join	jstrutils.html#join,openArray[cstring]	proc join(a: openArray[cstring]; sep = cstring""): cstring		35
+nimgrp	split	jstrutils.html#split-procs-all	proc		3
+nimgrp	substr	jstrutils.html#substr-procs-all	proc		15
+nimgrp	&	jstrutils.html#&-procs-all	proc		19

@@ -1,0 +1,61 @@
+nimTitle	vdom	vdom.html	module karax/vdom		0
+nim	VNodeKind	vdom.html#VNodeKind	enum VNodeKind		14
+nim	svgElements	vdom.html#svgElements	const svgElements		71
+nim	mathElements	vdom.html#mathElements	const mathElements		72
+nim	svgNamespace	vdom.html#svgNamespace	var svgNamespace		75
+nim	mathNamespace	vdom.html#mathNamespace	var mathNamespace		76
+nim	EventKind	vdom.html#EventKind	enum EventKind		79
+nim	toTag	vdom.html#toTag	const toTag		134
+nim	toEventName	vdom.html#toEventName	const toEventName		140
+nim	EventHandler	vdom.html#EventHandler	type EventHandler		147
+nim	NativeEventHandler	vdom.html#NativeEventHandler	type NativeEventHandler		148
+nim	EventHandlers	vdom.html#EventHandlers	type EventHandlers		150
+nim	VKey	vdom.html#VKey	type VKey		152
+nim	VNode	vdom.html#VNode	type VNode		154
+nim	VComponent	vdom.html#VComponent	type VComponent		170
+nim	value	vdom.html#value,VNode	proc value(n: VNode): kstring		187
+nim	value=	vdom.html#value=,VNode,kstring	proc value=(n: VNode; v: kstring)		188
+nim	intValue	vdom.html#intValue,VNode	proc intValue(n: VNode): int		190
+nim	vn	vdom.html#vn,int	proc vn(i: int): VNode		191
+nim	vn	vdom.html#vn,bool	proc vn(b: bool): VNode		192
+nim	vn	vdom.html#vn,kstring	proc vn(x: kstring): VNode		193
+nim	callThunk	vdom.html#callThunk.t,typed,VNode	template callThunk(fn: typed; n: VNode): untyped		195
+nim	vthunk	vdom.html#vthunk,kstring,varargs[VNode,vn]	proc vthunk(name: kstring; args: varargs[VNode, vn]): VNode		199
+nim	dthunk	vdom.html#dthunk,Node	proc dthunk(dom: Node): VNode		202
+nim	mergeEvents	vdom.html#mergeEvents,VNode,EventHandlers	proc mergeEvents(v: VNode; handlers: EventHandlers)		213
+nim	defaultChangedImpl	vdom.html#defaultChangedImpl,VComponent,VComponent	proc defaultChangedImpl(v, newInstance: VComponent): bool		217
+nim	defaultUpdatedImpl	vdom.html#defaultUpdatedImpl,VComponent,VComponent	proc defaultUpdatedImpl(v, newInstance: VComponent)		221
+nim	newComponent	vdom.html#newComponent.t,typedesc[T],typeof(nil),proc(VComponent),proc(VComponent),proc(VComponent,VComponent)	template newComponent[T](t: typedesc[T]; render: (proc (self: VComponent): VNode) = nil;\n                onAttach: proc (self: VComponent) = nil;\n                onDetach: proc (self: VComponent) = nil; changed: (\n    proc (self, newInstance: VComponent): bool) = defaultChangedImpl; updated: proc (\n    self, newInstance: VComponent) = defaultUpdatedImpl): T		229
+nim	markDirty	vdom.html#markDirty.t,VComponent	template markDirty(c: VComponent)		242
+nim	setAttr	vdom.html#setAttr,VNode,kstring,kstring	proc setAttr(n: VNode; key: kstring; val: kstring = "")		246
+nim	setAttr	vdom.html#setAttr,VNode,kstring,bool	proc setAttr(n: VNode; key: kstring; val: bool)		257
+nim	getAttr	vdom.html#getAttr,VNode,kstring	proc getAttr(n: VNode; key: kstring): kstring		270
+nim	takeOverAttr	vdom.html#takeOverAttr,VNode,VNode	proc takeOverAttr(newNode, oldNode: VNode)		274
+nim	takeOverFields	vdom.html#takeOverFields,VNode,VNode	proc takeOverFields(newNode, oldNode: VNode)		280
+nim	len	vdom.html#len,VNode	proc len(x: VNode): int		298
+nim	`[]`	vdom.html#[],VNode,int	proc `[]`(x: VNode; idx: int): VNode		299
+nim	`[]=`	vdom.html#[]=,VNode,int,VNode	proc `[]=`(x: VNode; idx: int; y: VNode)		300
+nim	add	vdom.html#add,VNode,VNode	proc add(parent, kid: VNode)		302
+nim	delete	vdom.html#delete,VNode,int	proc delete(parent: VNode; position: int)		307
+nim	insert	vdom.html#insert,VNode,VNode,int	proc insert(parent, kid: VNode; position: int)		309
+nim	newVNode	vdom.html#newVNode,VNodeKind	proc newVNode(kind: VNodeKind): VNode		311
+nim	tree	vdom.html#tree,VNodeKind,varargs[VNode]	proc tree(kind: VNodeKind; kids: varargs[VNode]): VNode		313
+nim	tree	vdom.html#tree,VNodeKind,openArray[],varargs[VNode]	proc tree(kind: VNodeKind; attrs: openArray[(kstring, kstring)]; kids: varargs[VNode]): VNode		317
+nim	text	vdom.html#text,string	proc text(s: string): VNode		323
+nim	text	vdom.html#text,kstring	proc text(s: kstring): VNode		324
+nim	verbatim	vdom.html#verbatim,string	proc verbatim(s: string): VNode		327
+nim	verbatim	vdom.html#verbatim,kstring	proc verbatim(s: kstring): VNode		329
+nim	items	vdom.html#items.i,VNode	iterator items(n: VNode): VNode		333
+nim	attrs	vdom.html#attrs.i,VNode	iterator attrs(n: VNode): (kstring, kstring)		336
+nim	sameAttrs	vdom.html#sameAttrs,VNode,VNode	proc sameAttrs(a, b: VNode): bool		340
+nim	addEventListener	vdom.html#addEventListener,VNode,EventKind,EventHandler	proc addEventListener(n: VNode; event: EventKind; handler: EventHandler)		346
+nim	toString	vdom.html#toString,VNode,string,int	proc toString(n: VNode; result: var string; indent: int)		359
+nim	add	vdom.html#add,string,VNode,int,int	proc add(result: var string; n: VNode; indent = 0; indWidth = 2)		408
+nim	`$`	vdom.html#$,VNode	proc `$`(n: VNode): kstring		504
+nim	getVNodeById	vdom.html#getVNodeById,VNode,cstring	proc getVNodeById(n: VNode; id: cstring): VNode		513
+nimgrp	setattr	vdom.html#setAttr-procs-all	proc		246
+nimgrp	add	vdom.html#add-procs-all	proc		302
+nimgrp	verbatim	vdom.html#verbatim-procs-all	proc		327
+nimgrp	vn	vdom.html#vn-procs-all	proc		191
+nimgrp	tree	vdom.html#tree-procs-all	proc		313
+nimgrp	text	vdom.html#text-procs-all	proc		323
